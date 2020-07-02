@@ -13,7 +13,7 @@ From the large number, it outputs a smaller number based on the amount of player
 
 
 Go to the block in question to verify that the correct player won, for example: https://hpbscan.org/block/6699060  
-There you will see "Hardware Random Number", for example: 0x146935869a8dc150faa5150746314d9b24f553ae271ebb3a91f135ae4ab55f26  
+There you see "Hardware Random Number" 0x146935869a8dc150faa5150746314d9b24f553ae271ebb3a91f135ae4ab55f26  
 Run this python script:  
 ```
 randomHex = "0x146935869a8dc150faa5150746314d9b24f553ae271ebb3a91f135ae4ab55f26"
