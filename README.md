@@ -22,7 +22,7 @@ originalPlayerAmount = 5
 minNumber = 0
 maxNumber = 99999999999999999999999999999999999999999999999999999999999999999999999999999
 mx = (randomNumber - minNumber) / (maxNumber - minNumber)
-preshiftNormalized = mx * (originalPlayerAmount - minNumber)
+preshiftNormalized = mx * ((originalPlayerAmount - 1) - minNumber)
 shiftedNormalized = int(preshiftNormalized + minNumber)
 print('Winning number is: {}'.format(shiftedNormalized))
 ```
