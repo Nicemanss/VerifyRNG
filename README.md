@@ -14,7 +14,8 @@ From the large number, it outputs a smaller number based on the amount of player
 
 Go to the block in question to verify that the correct player won, for example: https://hpbscan.org/block/6699060  
 There you see "Hardware Random Number" 0x146935869a8dc150faa5150746314d9b24f553ae271ebb3a91f135ae4ab55f26  
-Run this python script:  
+  
+Verify Winning Player:  
 ```
 randomHex = "0x146935869a8dc150faa5150746314d9b24f553ae271ebb3a91f135ae4ab55f26"
 randomNumber = int(randomHex, 16)
@@ -23,6 +24,31 @@ minNumber = 0
 maxNumber = 99999999999999999999999999999999999999999999999999999999999999999999999999999
 mx = (randomNumber - minNumber) / (maxNumber - minNumber)
 preshiftNormalized = mx * ((originalPlayerAmount - 1) - minNumber)
+shiftedNormalized = int(preshiftNormalized + minNumber)
+print('Winning number is: {}'.format(shiftedNormalized))
+```
+
+Verify if Lucky Loser was enabled (if it hits 99, then it is enabled):  
+```
+randomHex = "0x146935869a8dc150faa5150746314d9b24f553ae271ebb3a91f135ae4ab55f26"
+randomNumber = int(randomHex, 16)
+minNumber = 0
+maxNumber = 99999999999999999999999999999999999999999999999999999999999999999999999999999
+mx = (randomNumber - minNumber) / (maxNumber - minNumber)
+preshiftNormalized = mx * (99 - minNumber)
+shiftedNormalized = int(preshiftNormalized + minNumber)
+print('Lucky loser enabled number is: {}'.format(shiftedNormalized))
+```
+
+Verify Lucky Loser player:  
+```
+randomHex = "0x146935869a8dc150faa5150746314d9b24f553ae271ebb3a91f135ae4ab55f26"
+randomNumber = int(randomHex, 16)
+originalPlayerAmount = 5
+minNumber = 0
+maxNumber = 99999999999999999999999999999999999999999999999999999999999999999999999999999
+mx = (randomNumber - minNumber) / (maxNumber - minNumber)
+preshiftNormalized = mx * ((originalPlayerAmount - 2) - minNumber)
 shiftedNormalized = int(preshiftNormalized + minNumber)
 print('Winning number is: {}'.format(shiftedNormalized))
 ```
