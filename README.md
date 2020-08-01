@@ -1,5 +1,12 @@
 # Verifying the Hardware Random Number Generator being used for the Raffle Bot
 How to verify the authenticity of using the Hardware Random Number Generator for the Raffle Bot
+Cost to join Raffle: 5 HPB
+Players required to start: 5
+Total in per round: 25 HPB
+Lucky Loser Pot gets: 1 HPB
+To Dev/Server costs: 2HPB
+Prize for winner: 22 HPB
+
 
 ## How it works
 Each player joining the raffle is entered into a List.  
